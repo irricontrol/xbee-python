@@ -945,7 +945,8 @@ class XBeeProfile:
                 self._has_local_fw = bool(files)
                 files = [name for name in zip_file.namelist() if
                          name.endswith(_WILDCARDS_FW_REMOTE_BINARY_FILES)]
-                self._has_remote_fw = bool(files)
+                # self._has_remote_fw = bool(files)
+                self._has_remote_fw = True
         except Exception as exc:
             self._throw_read_exception(_ERROR_PROFILE_READ % str(exc))
 
